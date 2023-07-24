@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import header from '../../scss/component/header.module.scss';
+import header from '../scss/component/header.module.scss';
 
 const Header = () => {
     const [scroll, setScroll] = useState(false);

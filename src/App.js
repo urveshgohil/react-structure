@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Layout from './components/layout/';
+import { BrowserRouter } from 'react-router-dom';
+import AppRoutes from "./routes";
 const Loading = () => <div className="pt-3 text-center">Loading...</div>
 const ScrollToTop = React.lazy(() => import('./components/common/scroll'));
 
@@ -9,9 +9,7 @@ const App = () => {
         <BrowserRouter>
             <Suspense fallback={Loading()}>
                 <ScrollToTop>
-                    <Routes>
-                        <Route path="*" element={<Layout />} />
-                    </Routes>
+                    <AppRoutes />
                 </ScrollToTop>
             </Suspense>
         </BrowserRouter>

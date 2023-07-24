@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 
-import '../scss/pages/home.scss';
+import '../../scss/pages/home.scss';
 
 const TITLE = `Website :: Home`;
 
-const Home = () => {
+const Home = (props) => {
 	useEffect(() => {
 		let body = document.querySelector('body');
 		body.classList.add('home');
@@ -22,6 +22,7 @@ const Home = () => {
 			<section className="">
 				<div className="container">
 					Home Page
+					{props.appSuccess ? props.appSuccess : ''}
 				</div>
 			</section>
 		</>

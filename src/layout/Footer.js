@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import footer from '../../scss/component/footer.module.scss';
+import footer from '../scss/component/footer.module.scss';
 
 const Footer = () => {
     const [width, setWidth] = useState(window.innerWidth);
