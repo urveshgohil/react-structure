@@ -1,8 +1,9 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import AppRoutes from "./routes";
+import ScrollToTop from './components/common/scroll';
+
 const Loading = () => <div className="pt-3 text-center">Loading...</div>
-const ScrollToTop = React.lazy(() => import('./components/common/scroll'));
 
 const App = () => {
     return (
